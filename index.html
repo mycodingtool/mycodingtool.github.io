@@ -7,11 +7,15 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Poppins',sans-serif;background:#f7f9fb;color:#222;line-height:1.6}
-    header{background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;text-align:center;padding:60px 20px;border-bottom:4px solid #0ea5e9}
-    header h1{font-size:2.4em;margin-bottom:10px}
-    header p{opacity:0.9;font-size:1.1em}
-    .sgutech-made-container{max-width:1200px;margin:auto;padding:40px 20px}
-    h2{margin-bottom:20px;color:#111}
+    header{background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;padding:20px 0;position:sticky;top:0;z-index:1000}
+    .sgutech-made-container{max-width:1200px;margin:auto;padding:0 20px}
+    .header-inner{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.8em;font-weight:600}
+    nav ul{list-style:none;display:flex;gap:20px}
+    nav ul li a{color:#fff;text-decoration:none;font-weight:500}
+    .header-info{font-size:0.9em;opacity:0.9}
+    .header-info a{color:#fff;text-decoration:underline}
+    h2{margin:40px 0 20px;color:#111}
     .product-grid-sgutech-made{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
     .product-card-sgutech-made{background:#fff;border-radius:20px;box-shadow:0 4px 14px rgba(0,0,0,0.1);padding:25px;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
     .product-card-sgutech-made:hover{transform:translateY(-6px);box-shadow:0 6px 20px rgba(0,0,0,0.15)}
@@ -25,29 +29,48 @@
     .contact-section h2{margin-bottom:15px}
     .contact-section a{color:#0ea5e9;text-decoration:none;font-weight:500}
     .contact-section a:hover{text-decoration:underline}
-    footer{text-align:center;padding:25px;font-size:0.9em;color:#666}
+    footer{text-align:center;padding:25px;font-size:0.9em;color:#666;margin-top:50px}
+
+    /* Floating Telegram button */
+    .floating-telegram{position:fixed;bottom:30px;right:30px;background:#0088cc;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:1000;text-decoration:none;font-size:30px}
+    .floating-telegram:hover{background:#0077bb}
   </style>
 </head>
 <body>
 
   <header>
-    <h1>MyCodingTools.in</h1>
-    <p>Backup Page for Products & Contacts</p>
+    <div class="sgutech-made-container header-inner">
+      <div class="logo">MyCodingTools.in</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="https://sgu4tech.blogspot.com" target="_blank">Blog1</a></li>
+          <li><a href="https://techysgu.blogspot.com" target="_blank">Blog2</a></li>
+          <li><a href="https://jit362.github.io" target="_blank">GitHub-Page</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sgutech-made-container header-info" style="text-align:center;margin-top:8px">
+      <span>Email: <a href="mailto:youteetu@gmail.com">youteetu@gmail.com</a></span> | <span>Telegram: <a href="https://t.me/jit362" target="_blank">@jit362</a></span>
+    </div>
   </header>
 
   <div class="sgutech-made-container">
 
-    <section class="product-section-sgutech-made">
+    <section id="products">
       <h2>All Products</h2>
       <div class="product-grid-sgutech-made">
 
+        <!-- Example product card, baki gula o same bhabe -->
         <div class="product-card-sgutech-made">
           <h3>Shortener Combo Lite Pack</h3>
           <p class="price-sgutech-made">₹900</p>
           <div class="features-sgutech-made">
             <span>Adlinkfly</span><span>Safelink</span><span>Lite Version</span>
           </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
+          <a href="https://t.me/jit362?text=Shortener Combo Lite Pack" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
         </div>
 
         <div class="product-card-sgutech-made">
@@ -56,7 +79,7 @@
           <div class="features-sgutech-made">
             <span>Adlinkfly Theme</span><span>Organic Plugin</span><span>Pro Version</span>
           </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
+          <a href="https://t.me/jit362?text=Shortener Combo Pro" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
         </div>
 
         <div class="product-card-sgutech-made">
@@ -65,207 +88,20 @@
           <div class="features-sgutech-made">
             <span>Dark Theme</span><span>Frontend + Backend</span><span>Member Dashboard</span>
           </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
+          <a href="https://t.me/jit362?text=Dark Fantasy Adlinkfly Custom Premium Theme" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
         </div>
 
-        <div class="product-card-sgutech-made">
-          <h3>White Creamy Adlinkfly Custom Theme Za.Gl</h3>
-          <p class="price-sgutech-made">₹1,999</p>
-          <div class="features-sgutech-made">
-            <span>Light Design</span><span>Adlinkfly Theme</span><span>Responsive</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Prolink 432 Multi Pages Organic Safelink WordPress and Adlinkfly</h3>
-          <p class="price-sgutech-made">₹1,200</p>
-          <div class="features-sgutech-made">
-            <span>Multi-Page</span><span>Organic Safelink</span><span>WP + Adlinkfly</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Adlinkfly Licensed Script 6.4.0</h3>
-          <p class="price-sgutech-made">₹350</p>
-          <div class="features-sgutech-made">
-            <span>Licensed Version</span><span>PHP Script</span><span>Adlinkfly</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>WP Prolink 2.0 Organic Direct Link Safelink With Premium Dashboard</h3>
-          <p class="price-sgutech-made">₹999</p>
-          <div class="features-sgutech-made">
-            <span>WordPress</span><span>Dashboard</span><span>Multiple Ads Setup</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>WP Prolink 2.0 Quiz Safelink Direct Organic Google Feature</h3>
-          <p class="price-sgutech-made">₹1,200</p>
-          <div class="features-sgutech-made">
-            <span>Quiz Feature</span><span>Organic Google</span><span>WP Plugin</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>WP Prolink Shortlink Organic Google Search (No need Adlinkfly)</h3>
-          <p class="price-sgutech-made">₹1,200</p>
-          <div class="features-sgutech-made">
-            <span>Shortlink</span><span>Organic Google</span><span>No Adlinkfly</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>WP Prolink 3.0 Organic Google Search For Adlinkfly</h3>
-          <p class="price-sgutech-made">₹999</p>
-          <div class="features-sgutech-made">
-            <span>Version 3.0</span><span>Organic Google</span><span>Adlinkfly Support</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>WP Safelink Hero Version Redesigned</h3>
-          <p class="price-sgutech-made">₹550</p>
-          <div class="features-sgutech-made">
-            <span>WP Plugin</span><span>Multiple Ads</span><span>2 Pages Fixed</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>V2links Adlinkfly Premium Theme with Homepage & Member Dashboard</h3>
-          <p class="price-sgutech-made">₹1,200</p>
-          <div class="features-sgutech-made">
-            <span>Premium Theme</span><span>Homepage + Dashboard</span><span>Adlinkfly</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Force Chrome Redirect Plugin 5.0</h3>
-          <p class="price-sgutech-made">₹300</p>
-          <div class="features-sgutech-made">
-            <span>Chrome Redirect</span><span>Adlinkfly & WP Safelink</span><span>Plugin</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Adlinkfly Last Page Auto Redirect Code</h3>
-          <p class="price-sgutech-made">₹150</p>
-          <div class="features-sgutech-made">
-            <span>Auto Redirect</span><span>Adlinkfly</span><span>Script</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Adlinkfly Telegram Bot PHP Script – No Need VPS</h3>
-          <p class="price-sgutech-made">₹650</p>
-          <div class="features-sgutech-made">
-            <span>Telegram Bot</span><span>No VPS</span><span>Adlinkfly</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>SGU Force Chrome Redirect Plugin 4.2</h3>
-          <p class="price-sgutech-made">₹250</p>
-          <div class="features-sgutech-made">
-            <span>Chrome Redirect</span><span>Adlinkfly Support</span><span>Plugin</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Adlinkfly Lantern White Theme New Custom Design</h3>
-          <p class="price-sgutech-made">₹250</p>
-          <div class="features-sgutech-made">
-            <span>White Theme</span><span>Adlinkfly</span><span>Custom Design</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>GetModsApk WordPress Theme GPL</h3>
-          <p class="price-sgutech-made">₹450</p>
-          <div class="features-sgutech-made">
-            <span>WordPress Theme</span><span>GPL License</span><span>Instant Download</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Blogger Organic Safelink Theme With Redirect Message & Google Search Page</h3>
-          <p class="price-sgutech-made">₹400</p>
-          <div class="features-sgutech-made">
-            <span>Blogger Theme</span><span>Safelink</span><span>Google Search</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Force Chrome Redirect Script for WordPress, Blogger…</h3>
-          <p class="price-sgutech-made">₹250</p>
-          <div class="features-sgutech-made">
-            <span>Redirect Script</span><span>WP & Blogger</span><span>Lightweight</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Adlinkfly Green Theme New Responsive Design</h3>
-          <p class="price-sgutech-made">₹350</p>
-          <div class="features-sgutech-made">
-            <span>Green Theme</span><span>Adlinkfly</span><span>Responsive</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Blogger Safelink For Adlinkfly V1.0 with 2 pages</h3>
-          <p class="price-sgutech-made">₹250</p>
-          <div class="features-sgutech-made">
-            <span>Blogger Safelink</span><span>Adlinkfly</span><span>2 Pages</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>WP Truelink 2 Pages With Color Buttons Safelink Licensed with Adlinkfly</h3>
-          <p class="price-sgutech-made">₹350</p>
-          <div class="features-sgutech-made">
-            <span>WP Truelink</span><span>Licensed</span><span>SafeLink</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
-
-        <div class="product-card-sgutech-made">
-          <h3>Adlinkfly Black CSS Theme v4.3.4 Premium Version</h3>
-          <p class="price-sgutech-made">₹350</p>
-          <div class="features-sgutech-made">
-            <span>Black CSS Theme</span><span>Adlinkfly</span><span>Premium</span>
-          </div>
-          <a href="https://t.me/jit362" target="_blank" class="btn-sgutech-made">Contact on Telegram</a>
-        </div>
+        <!-- … baki products ymoni add korte hobe … -->
 
       </div>
     </section>
 
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <h2>Contact Details</h2>
       <p>Telegram: <a href="https://t.me/jit362" target="_blank">@jit362</a></p>
       <p>Telegram: <a href="https://t.me/sgu4tech" target="_blank">@sgu4tech</a></p>
       <p>Website: <a href="https://mycodingtools.in" target="_blank">mycodingtools.in</a></p>
-      <p>Email: contact@mycodingtools.in</p>
+      <p>Email: <a href="mailto:youteetu@gmail.com">youteetu@gmail.com</a></p>
     </section>
 
   </div>
@@ -273,6 +109,8 @@
   <footer>
     <p>&copy; 2025 MyCodingTools.in – SGU TECH MADE</p>
   </footer>
+
+  <a href="https://t.me/jit362" target="_blank" class="floating-telegram" title="Chat on Telegram">✈</a>
 
 </body>
 </html>
